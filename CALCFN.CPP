@@ -1,77 +1,49 @@
-
-
 #include<iostream.h>
 #include<conio.h>
 
-class Calc
-{
-	int n1,n2;
-	public:
-		void getNo();
-		void Addition();
-		void Subtraction();
-		void Multiplication();
-		void Division();
-};
-void Calc::getNo()
-{
-	cout<<"\nEnter First Number : ";
-	cin>>n1;
-	cout<<"\nEnter Second Number : ";
-	cin>>n2;
-}
-void Calc::Addition()
-{
-	cout<<"\n\nAddition : "<<n1+n2;
-}
-void Calc::Subtraction()
-{
-	cout<<"\n\nSubtraction : "<<n1-n2;
-}
-void Calc::Multiplication()
-{
-	cout<<"\n\nMultiplication : "<<n1*n2;
-}
-void Calc::Division()
-{
-	cout<<"\n\nDivision : "<<n1/n2;
-}
 void main()
 {
+	int a,b;
 	int choice;
-	Calc c;
+
 	clrscr();
 
-	c.getNo();
+	cout<<"\nEnter A : ";
+	cin>>a;
+	cout<<"\nEnter B : ";
+	cin>>b;
 
-	cout<<"\n\n\nPlease Choose One Function From the Following";
-	cout<<"\n\n1. Addition";
+	cout<<"\nEnter Your Choice\n";
+	cout<<"\n1. Addition";
 	cout<<"\n2. Subtraction";
 	cout<<"\n3. Multiplication";
 	cout<<"\n4. Division";
-	cout<<"\nEnter the No. of Your Choice : ";
+	cout<<"\n\nEnter the Corresponding Number to Your Choice : ";
 	cin>>choice;
 
-	if(choice==1)
+	switch(choice)
 	{
-		c.Addition();
-	}
-	else if(choice==2)
-	{
-		c.Subtraction();
-	}
-	else if(choice==3)
-	{
-		c.Multiplication();
-	}
-	else if(choice==4)
-	{
-		c.Division();
-	}
-	else
-	{
-		cout<<"\nInvalid Input! Please Enter A Valid Input";
+		case 1:
+			cout<<"\nAddition : "<<a+b;
+			break;
+
+		case 2:
+			cout<<"\nSubtraction : "<<a-b;
+			break;
+
+		case 3:
+			cout<<"\nMultiplication : "<<a*b;
+			break;
+
+		case 4:
+			cout<<"\nDivision : "<<a/b;
+			break;
+
+		default:
+			cout<<"\nInvalid Input! Please Enter Corresponding Number to Your Choice.";
+			break;
 	}
 
 	getch();
+
 }
